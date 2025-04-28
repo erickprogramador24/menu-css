@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Profesional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="background"></div>
+    
+    <header class="navbar">
+      <div class="logo">ERICK<span>DEV</span></div>
+      <button class="navbar-burger" onclick="toggleMenu()">
+        <span class="burger-icon"></span>
+      </button>
+    </header>
+    
+    <div class="menu">
+      <nav>
+        <a href="#about" style="--delay: 0.1s">About</a>
+        <a href="#portfolio" style="--delay: 0.2s">Portfolio</a>
+        <a href="#services" style="--delay: 0.3s">Services</a>
+        <a href="#contact" style="--delay: 0.4s">Contact</a>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </nav>
+    </div>
+    
+    <footer class="footer">
+      <p>DESARROLLADO POR <strong>ERICK PROGRAMADOR</strong></p>
+      <div class="footer-wave"></div>
+    </footer>
+
+    <script>
+      const toggleMenu = () => {
+        document.body.classList.toggle("open");
+      };
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+          document.body.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>
